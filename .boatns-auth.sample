@@ -1,0 +1,5 @@
+# Log in to https://boatns.com/ and create a new API key.
+# Insert the API key for Certbot here:
+
+BOATNS_API_AUTH="<boatns-api-key-for-certbot>"
+
