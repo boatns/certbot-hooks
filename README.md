@@ -1,6 +1,6 @@
 # BoatNS authenticator hook for Certbot
 
-This hook allows Certbot to use DNS-01 challenge for domains hosted by BoatNS.
+This hook allows Certbot to use DNS-01 challenge for domains hosted by <a href="https://boatns.com/">BoatNS</a>
 
 ## Setup
 
@@ -10,9 +10,9 @@ Clone repository and create a `.boatns-auth` file:
     cd certbot-hooks
     cp .boatns-auth.sample .boatns-auth
 
-Create API key: [boatns.com](https://boatns.com/) > Login > Profile > API keys
+Go to [boatns.com](https://boatns.com/) and create API key: Login > Profile > API keys
 
-Replace `<boatns-auth-secret>` with the API key auth secret in the `.boatns-auth` file.
+Edit the `.boatns-auth` file and replace `<boatns-auth-secret>` with the API key auth secret.
 
 ## Issue certificate
 
