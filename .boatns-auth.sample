@@ -1,5 +1,7 @@
-# Log in to https://boatns.com/ and create a new API key.
-# Insert the API key for Certbot here:
+# IMPORTANT! Make sure to protect this file!
+# Only the user running certbot should have read access.
 
-BOATNS_API_AUTH="<boatns-api-key-for-certbot>"
+# Log in to https://boatns.com/ and create a new API key.
+# Replace <boatns-auth-secret> with the API key auth secret:
+BOATNS_API_AUTH="<boatns-auth-secret>"
 
