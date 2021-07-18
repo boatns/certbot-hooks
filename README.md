@@ -10,7 +10,7 @@ Clone repository and create a `.boatns-auth` file:
     cd certbot-hooks
     cp .boatns-auth.sample .boatns-auth
 
-Go to [boatns.com](https://boatns.com/) and create API key: Login > Profile > API keys
+Go to [boatns.com](https://boatns.com/) and create API key at: Login > API
 
 Edit the `.boatns-auth` file and replace `<boatns-auth-secret>` with the API key auth secret.
 
@@ -20,13 +20,16 @@ Edit the `.boatns-auth` file and replace `<boatns-auth-secret>` with the API key
 certbot certonly \
   --manual \
   --preferred-challenges=dns \
-  --manual-auth-hook /path/to/certbot-hooks/authenticator \
+  --manual-auth-hook /PATH/TO/certbot-hooks/authenticator \
+  --manual-cleanup-hook /PATH/TO/certbot-hooks/cleanup \
   -d secure.example.com
 ```
 
-## Cleanup Hook
+## Domain specific API key
 
-There is no need for a cleanup hook, the validation record is automatically deleted after 15 minutes.
+By default the authenticator hook loads the BoatNS API key from the file `.boatns-auth` for all requests.
+
+But if we want to use a different API key for a specific domain, we could do so by creating a `.boatns-auth.DOMAIN` file - ie. create the file `.boatns-auth.some.example.com` for the domain `some.example.com`
 
 ## Certbot Documentation
 

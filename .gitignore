@@ -1,1 +1,3 @@
 .boatns-auth
+.boatns-auth.*
+!.boatns-auth.sample
