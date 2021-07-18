@@ -15,12 +15,9 @@ fi
 chmod 600 "$AUTHFILE"
 . "$AUTHFILE"
 
-# Authenticate using BoatNS API
+# Cleanup using BoatNS API
 wget --output-document=- \
   --header="Authorization: Basic ${BOATNS_API_AUTH}" \
   --post-data="domain=${CERTBOT_DOMAIN}&validation=${CERTBOT_VALIDATION}" \
-  https://boatns.com/api/v1/certbot/auth
-
-# Wait 15 sec for public nameservers to be updated..
-sleep 15
+  https://boatns.com/api/v1/certbot/cleanup
 
